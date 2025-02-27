@@ -1,0 +1,13 @@
+numpy
+matplotlib
+pillow
+selenium
+requests
+onnxruntime
+cryptography
+uvicorn
+fastapi
+python-multipart
+opencv-python-headless==4.5.5.62
+Cython
+aiohttp
