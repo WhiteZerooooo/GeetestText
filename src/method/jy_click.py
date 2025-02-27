@@ -28,12 +28,11 @@ class JYClick(object):
         yolo_path = path(save_path, yolo_path)
         if sign:
             try:
-                from src.utils.load import decryption
+                from src.utils.load import decryption # type: ignore
             except:
                 raise Exception("Error! 请在windows下的python3.6、3.8、3.10环境下使用")
             yolo_path = decryption(yolo_path)
             per_path = decryption(per_path)
-        print(yolo_path)
         self.yolo = yolo_onnx.YOLOV5_ONNX(yolo_path, classes=['target', 'title', 'char'], providers=['CPUExecutionProvider'])
         self.pre = ver_onnx.PreONNX(per_path, providers=['CPUExecutionProvider'])
 
